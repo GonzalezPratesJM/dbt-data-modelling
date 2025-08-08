@@ -1,0 +1,96 @@
+version: 2
+
+sources:
+  - name: raw_financial_data
+    description: "Raw financial data from various sources in Supabase"
+    database: postgres  # Supabase uses PostgreSQL
+    schema: public      # Default schema in Supabase
+    tables:
+      - name: news_articles
+        description: "News articles from NewsAPI stored in Supabase"
+        columns:
+          - name: id
+            description: "Primary key"
+            tests:
+              - unique
+              - not_null
+          - name: article_id
+            description: "Unique article identifier"
+            tests:
+              - unique
+          - name: title
+            description: "Article title"
+          - name: description
+            description: "Article description"
+          - name: content
+            description: "Article content"
+          - name: author
+            description: "Article author"
+          - name: source_name
+            description: "News source name"
+          - name: url
+            description: "Article URL"
+          - name: published_at
+            description: "Publication timestamp"
+          - name: collected_at
+            description: "Data collection timestamp"
+            
+      - name: stock_prices
+        description: "Stock price data from yfinance stored in Supabase"
+        columns:
+          - name: id
+            description: "Primary key"
+            tests:
+              - unique
+              - not_null
+          - name: symbol
+            description: "Stock symbol"
+            tests:
+              - not_null
+          - name: date
+            description: "Timestamp of the price data"
+            tests:
+              - not_null
+          - name: open_price
+            description: "Opening price"
+          - name: high_price
+            description: "Highest price"
+          - name: low_price
+            description: "Lowest price"
+          - name: close_price
+            description: "Closing price"
+          - name: volume
+            description: "Trading volume"
+          - name: collected_at
+            description: "Data collection timestamp"
+            
+      - name: reddit_posts
+        description: "Reddit posts about stocks stored in Supabase"
+        columns:
+          - name: id
+            description: "Primary key"
+            tests:
+              - unique
+              - not_null
+          - name: post_id
+            description: "Reddit post ID"
+            tests:
+              - unique
+          - name: title
+            description: "Post title"
+          - name: content
+            description: "Post content"
+          - name: author
+            description: "Post author"
+          - name: score
+            description: "Post score"
+          - name: num_comments
+            description: "Number of comments"
+          - name: created_utc
+            description: "Post creation timestamp"
+          - name: subreddit
+            description: "Subreddit name"
+          - name: url
+            description: "Post URL"
+          - name: collected_at
+            description: "Data collection timestamp" 

@@ -1,0 +1,21 @@
+symbol,company_name,sector
+AAPL,Apple Inc.,Technology
+MSFT,Microsoft Corporation,Technology
+GOOGL,Alphabet Inc.,Technology
+AMZN,Amazon.com Inc.,Consumer Discretionary
+TSLA,Tesla Inc.,Consumer Discretionary
+META,Meta Platforms Inc.,Technology
+NVDA,NVIDIA Corporation,Technology
+NFLX,Netflix Inc.,Communication Services
+JPM,JPMorgan Chase & Co.,Financial Services
+JNJ,Johnson & Johnson,Healthcare
+V,Visa Inc.,Financial Services
+PG,Procter & Gamble Co.,Consumer Staples
+HD,Home Depot Inc.,Consumer Discretionary
+MA,Mastercard Inc.,Financial Services
+UNH,UnitedHealth Group Inc.,Healthcare
+DIS,Walt Disney Co.,Communication Services
+PYPL,PayPal Holdings Inc.,Technology
+ADBE,Adobe Inc.,Technology
+CRM,Salesforce Inc.,Technology
+NKE,Nike Inc.,Consumer Discretionary 

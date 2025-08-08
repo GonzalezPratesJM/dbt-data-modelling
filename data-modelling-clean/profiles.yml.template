@@ -1,0 +1,42 @@
+financial_sentiment:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: "{{ env_var('DB_HOST') }}"
+      port: 5432
+      user: "{{ env_var('DB_USER') }}"
+      password: "{{ env_var('DB_PASSWORD') }}"
+      dbname: "{{ env_var('DB_NAME') }}"
+      schema: public
+      threads: 4
+      keepalives_idle: 0
+      search_path: public
+      # Database specific settings
+      connect_timeout: 60
+      retries: 5
+      sslmode: verify-full
+      sslcert: null
+      sslkey: null
+      sslrootcert: null
+      application_name: dbt
+      
+    prod:
+      type: postgres
+      host: "{{ env_var('DB_HOST') }}"
+      port: 5432
+      user: "{{ env_var('DB_USER') }}"
+      password: "{{ env_var('DB_PASSWORD') }}"
+      dbname: "{{ env_var('DB_NAME') }}"
+      schema: public
+      threads: 8
+      keepalives_idle: 0
+      search_path: public
+      # Database specific settings
+      connect_timeout: 60
+      retries: 5
+      sslmode: verify-full
+      sslcert: null
+      sslkey: null
+      sslrootcert: null
+      application_name: dbt 
